@@ -990,14 +990,19 @@ textarea::placeholder {
 
   border: 1px solid #212121;
   cursor: pointer;
+
+  transform: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox:checked + .modal-checkbox-label::before {
-  background-image: linear-gradient(var(--accent-color), var(--accent-color)),
-    url(../images/sprite6.svg#icon-check);
+  background-image: url(../images/sprite6.svg#icon-check);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  background-color: var(--accent-color);
 }
 
 .modal-checkbox:focus + .modal-checkbox-label::before,
